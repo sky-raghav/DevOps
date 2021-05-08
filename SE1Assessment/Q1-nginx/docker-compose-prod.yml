@@ -1,0 +1,10 @@
+version: '3'  
+services:
+  nginx:
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: 'Dockerfile.prod'
+    ports:
+      - '8080:80'
+    tty: true
